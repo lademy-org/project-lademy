@@ -3,6 +3,9 @@
 <head>
   <title>lademy</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.css">
+  <link rel="stylesheet" href="./css/all.min.css">
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +19,8 @@
       border-radius: 0;
       background-color:rgb(66, 61, 66);
       padding: 20px;
+      /* position: fixed; */
+      /* width: 100%; */
     }
     
     /* Add a gray background color and some padding to the footer */
@@ -36,7 +41,17 @@
        height: 30vh;
    }
    
-  
+ body{
+   background-image: url(./img/brain.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   
+ }
+
+ 
+
+ 
 
   </style>
 </head>
@@ -57,12 +72,14 @@
         <li class="active"><a href="#">Lesson videos</a></li>
         <li><a href="#">Text to speech</a></li>
         <li><a href="#">Games</a></li>
-        <li><a href="#">Profile</a></li>
-        <!-- <li class="profile"><a href="#"><img src="./img/pit10.jpeg" alt=""></a></li> -->
+        <li><a href="./profile.html">Profile</a></li>
+        
         <li><a href="#">Ask question</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        
+         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        
       </ul>
     </div>
   </div>
@@ -75,14 +92,40 @@
   </div>
 </div>
   
-<div class="container-fluid bg-3 text-center">    
-  <button class="sign">Sign up for our courses</button>
+<div class="container-fluid bg-3 text-center">  
+  
+  <button class="open-button" onclick="openForm()">sign up</button>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Create account </h1>
+
+    <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter your name" name="username" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="email"><b>Course</b></label>
+    <input type="text" placeholder="Eg beginner,Intermediary,Advanced or business" name="course" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Confirm password" name="psw" required>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+   <div class="bow">
+     <div>
   <h2>Why choose us</h2>
   <div class="row">
     <div class="col-sm-3">
       <p><div class="col-md-4">
         <div class="d-flex flex-row">
-          <i class="fas fa-question fa-3x m-2"></i>
+          <i class="fas fa-user-friends fa-3x m-2"></i>
             <div class="d-flex flex-column">
               <h3 class="m-2"> User Friendly</h3>
               <p class="m-2">
@@ -92,12 +135,11 @@
           </i>
         </div>
       </div></p>
-      <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
     </div>
     <div class="col-sm-3"> 
       <p><div class="col-md-4">
         <div class="d-flex flex-row">
-          <i class="fas fa-question fa-3x m-2"></i>
+          <i class="fa fa-paw fa-3x m-2"></i>
             <div class="d-flex flex-column">
               <h3 class="m-2">Trusted Partner </h3>
               <p class="m-2">
@@ -107,12 +149,12 @@
           </i>
         </div>
       </div></p>
-      <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
+    
     </div>
     <div class="col-sm-3"> 
       <p><div class="col-md-4">
         <div class="d-flex flex-row">
-          <i class="fas fa-question fa-3x m-2"></i>
+          <i class="fas fa-user-clock fa-3x m-2"></i>
             <div class="d-flex flex-column">
               <h3 class="m-2">24/7 Support </h3>
               <p class="m-2">
@@ -122,7 +164,7 @@
           </i>
         </div>
       </div></p>
-      <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
+    
     </div>
     <div class="col-sm-3">
       <p><div class="col-md-4">
@@ -137,7 +179,7 @@
           </i>
         </div>
       </div></p>
-      <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
+    
     </div>
   </div>
 </div><br>
@@ -176,10 +218,11 @@
 
       <div class="social" style="margin-top: 5%; font-size: 20px;">
         <div class="d-flex flex-row justify-content-center">
-         <i class="fab fa-instagram m-2"></i>
-          <i class="fab fa-facebook-square m-2"></i>
-          <i class="fab fa-twitter m-2"></i>
-          <i class="fab fa-youtube m-2"></i>
+         <i class="fab fa-instagram  fa-2x m-2"></i>
+          <i class="fab fa-facebook-square fa-2x m-2"></i>
+          <i class="fab fa-twitter fa-2x m-2"></i>
+          <i class="fab fa-youtube  fa-2x m-2"></i>
+          <i class="fa fa-phone-square fa-2x m-2"></i>
         </div>
       </div>
       <div>
@@ -218,6 +261,9 @@
      
     </script>
 </footer>
+</div>
+</div>
 
+<script src="./app.js"></script>
 </body>
 </html>
