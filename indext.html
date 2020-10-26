@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
@@ -35,6 +35,8 @@
         border-radius: 25%;
         color: rgb(15, 199, 15);
         font-size: larger;
+        width: 20rem;
+    
     }
    .img-responsive{
        object-fit: cover;
@@ -49,7 +51,7 @@
    
  }
 
- 
+
 
  
 
@@ -69,17 +71,19 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Lesson videos</a></li>
+        <li class=""><a href="./indext.html">Home</a></li>
+        <li class=""><a href="./lesson.html">Lesson videos</a></li>
         <li><a href="#">Text to speech</a></li>
         <li><a href="#">Games</a></li>
         <li><a href="./profile.html">Profile</a></li>
         
-        <li><a href="#">Ask question</a></li>
+        <li><a href="./ask.html">Ask question</a></li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
-         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        
+         <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+         <li><a href="./login.html">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -94,32 +98,10 @@
   
 <div class="container-fluid bg-3 text-center">  
   
-  <button class="open-button" onclick="openForm()">sign up</button>
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Create account </h1>
-
-    <label for="email"><b>Username</b></label>
-    <input type="text" placeholder="Enter your name" name="username" required>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="email"><b>Course</b></label>
-    <input type="text" placeholder="Eg beginner,Intermediary,Advanced or business" name="course" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Confirm password" name="psw" required>
-
-    <button type="submit" class="btn">Submit</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
+  <button class="sign"><a href="./signup.html">signup</a></button>
+ 
    <div class="bow">
-     <div>
+      <div>
   <h2>Why choose us</h2>
   <div class="row">
     <div class="col-sm-3">
@@ -208,7 +190,7 @@
 <footer class="container-fluid text-center">
     <div class="section-5 text-center">
         <h4 style="margin-top: 5%;">Your french learning just got interactive and fun.</h4>
-        <h4 class="my-4">We've got you covered</h4>
+        <h4 class="my-4">We've got you covered</h4> 
       </div>
 
       <div class="form-inline justify-content-center">
@@ -218,11 +200,11 @@
 
       <div class="social" style="margin-top: 5%; font-size: 20px;">
         <div class="d-flex flex-row justify-content-center">
-         <i class="fab fa-instagram  fa-2x m-2"></i>
-          <i class="fab fa-facebook-square fa-2x m-2"></i>
-          <i class="fab fa-twitter fa-2x m-2"></i>
-          <i class="fab fa-youtube  fa-2x m-2"></i>
-          <i class="fa fa-phone-square fa-2x m-2"></i>
+         <a href=""><i class="fab fa-instagram  fa-2x m-2"></i></a>
+         <a href="https://www.facebook.com/profile.php?id=100004649536988"><i class="fab fa-facebook-square fa-2x m-2"></i></a>
+         <a href=""> <i class="fab fa-twitter fa-2x m-2"></i></a>
+          <a href=""><i class="fab fa-youtube  fa-2x m-2"></i></a>
+         <a href=""><i class="fa fa-phone-square fa-2x m-2"></i></a> 
         </div>
       </div>
       <div>
